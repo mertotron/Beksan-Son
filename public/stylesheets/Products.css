@@ -1,0 +1,21 @@
+.card-container-products {
+    display: flex;
+    flex-wrap: wrap; /* Flex öğelerin sarmalanmasını sağlar */
+}
+
+.product-card {
+    margin: 30px;
+    border: 2px solid #000;
+    flex: 1 0 calc(25% - 20px); /* Her bir öğe için genişlik hesaplanır ve kenar boşlukları çıkarılır */
+    box-sizing: border-box; /* Kenarlık ve dolgu dahil olmak üzere genişlik hesaplanır */
+    height: 200px;
+    border-radius: 20px;
+    background-color: #ced3d9;
+}
+
+.product-card:hover{
+    background-color: white;
+    transform: scale(1.1);
+    background: linear-gradient(to top, #ced3d9, white); /* Kartın arka planına siyahtan beyaza doğru bir gradient uygulayın */
+    
+}

@@ -1,0 +1,84 @@
+.Communication-channels{
+    width: 600px;
+    height: 900px;
+    margin: 20px;
+}
+.Map-container{
+    width: 1100px;
+    height: 900px;
+    text-align: center;
+    margin-left: 100px;    
+}
+.section-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-top: 30px;
+    background-color: #004F7C;
+    color: #F2F4F3;
+}
+.iframe-maps{
+    /* iframe google mapsi bulunduran kod */
+}
+.gnl-mudurluk-iletisim{
+    margin: 10px;
+    border-radius: 5px;
+}
+.media-linkedin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align:center;
+    font-size: 70px;
+    font-weight:bolder;
+    padding-left: 10px;
+}
+.media-facebook{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align:center;
+    font-size: 70px;
+    font-weight:bolder;
+    padding-left: 10px;
+}
+.media-instagram{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align:center;
+    font-size: 70px;
+    font-weight:bolder;
+    padding-left: 10px;
+}
+#linkedin{
+    width: 120px;
+    height: 120px;
+    padding-left: 150px;
+}
+#facebooklogo{
+    width: 130px;
+    height: 130px;
+    padding-left: 65px;
+}
+#instagramicon{
+    width: 120px;
+    height: 120px;
+    padding-left: 60px;
+}
+.text-p{
+    font-size: large;
+    
+}
+#banner-id {
+    max-width: 100%;
+    height: auto;
+}
+.banner-div {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #004F7C; /* Dark blue background */
+  }
+  

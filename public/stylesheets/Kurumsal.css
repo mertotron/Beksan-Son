@@ -1,0 +1,70 @@
+body{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+#cards-container{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    /* background-color: #000; */
+    height: 500px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    
+}
+.item-card{
+    margin-left: 50px;
+    padding: 60px;
+    padding-top: 80px;
+    background-color: #ced3d9;
+    margin: 30px;
+    transition: transform 0.3s ease;
+    transition: background-color 0.5s;
+}
+
+#list-ofinfo{
+    border: 2px solid #000;
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+#list-structure-organization{
+    border: 2px solid #000;
+    border-radius: 20px;
+    width: 500px;
+}
+
+#list-targets{
+    border: 2px solid #000;
+    border-radius: 20px;
+    width: 500px;
+}
+/* item-card için hover olduğunda yapılacak efekt ve renkler */
+.item-card:hover{
+    background-color: white;
+    transform: scale(1.1);
+    background: linear-gradient(to top, #ced3d9, white); /* Kartın arka planına siyahtan beyaza doğru bir gradient uygulayın */
+    
+}
+
+
+/*alt kısımdaki banner logo css kodları */
+.banner-div {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #004F7C; /* Dark blue background */
+}
+
+/* 
+sayfanın altındaki hakları saklıdır kısmı */
+#footer-kr{
+    background-color:  #ced3d9;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 110px;
+    padding-left: 20px;
+}

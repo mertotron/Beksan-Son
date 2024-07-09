@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ADMİN PANELİ GELDİ</h1>
+
+    <form action="/productadd" method="post" enctype="multipart/form-data">
+        <label for="urunadi">Ürün adını giriniz: </label>
+        <input type="text" id="urunadi" name="urunadi">
+        <label for="urunresmi">Ürün resmini giriniz</label>
+        <input type="file" id="urunresmi" name="urunresmi">
+        <label for="urunaciklama">Ürün açıklamasını girin</label>
+        <input type="text" id="urunaciklama" name="urunaciklama">
+        <label for="urunsinif">Ürün sınıfını girin</label>
+        <input type="text" id="urunsinif" name="urunsinif">
+        <input type="submit">
+    </form>
+
+    <form action="/deletepost" method="post">
+        <label for="ID">Silmek istediğiniz ürünün id sini girin</label>
+        <input type="number" id="ID" name="ID">
+        <input type="submit">
+    </form>
+
+    
+
+
+</body>
+</html>

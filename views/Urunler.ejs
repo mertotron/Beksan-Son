@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beksan Civata Ürünler</title>
+    <link rel="stylesheet" href="stylesheets/Genelayar.css">
+    <link rel="stylesheet" href="stylesheets/Products.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <a href="/" class="link-h2"><h2 class="h2-nav">ANASAYFA</h2></a>
+            <a href="/kurumsal" class="link-h2"><h2 class="h2-nav">KURUMSAL</h2></a>
+            <a href="/urunler" class="link-h2"><h2 class="h2-nav">ÜRÜNLER</h2></a>
+            <a href="/iletisim" class="link-h2"><h2 class="h2-nav">İLETİŞİM</h2></a>
+        </div>
+    </nav>
+
+    <div class="card-container-products">
+        <% products.forEach(product => { %>
+            <div class="product-card">
+                <h4><%= product.urun_adi %></h4>
+                <h5>Ürün ID = <%= product.urun_id %></h5>
+                <% 
+                    // Dosya yolundan 'public' ifadesini çıkar ve ters eğik çizgileri düz eğik çizgilere dönüştür
+                    const imagePath = product.urun_resmi.replace(/\\/g, '/').replace('public', '');
+                %>
+                <img src="<%= imagePath %>" alt="<%= product.urun_adi %>">
+                <p><%= product.urun_aciklama %></p>
+            </div>
+        <% }) %>
+    </div>
+    
+    
+    <div class="banner-div">
+        <img src="logo/logo-nobgkırp.png" alt="BeksanCivataLogo" id="banner-id">
+    </div>
+
+</body>
+</html>
