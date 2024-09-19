@@ -1,84 +1,72 @@
-.Communication-channels{
-    width: 600px;
-    height: 900px;
-    margin: 20px;
-}
-.Map-container{
-    width: 1100px;
-    height: 900px;
-    text-align: center;
-    margin-left: 100px;    
-}
-.section-container{
-    display: flex;
-    flex-direction: row;
-    margin-left: 15px;
-    margin-right: 20px;
-    margin-top: 30px;
-    background-color: #004F7C;
-    color: #F2F4F3;
-}
-.iframe-maps{
-    /* iframe google mapsi bulunduran kod */
-}
-.gnl-mudurluk-iletisim{
-    margin: 10px;
-    border-radius: 5px;
-}
-.media-linkedin {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align:center;
-    font-size: 70px;
-    font-weight:bolder;
-    padding-left: 10px;
-}
-.media-facebook{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align:center;
-    font-size: 70px;
-    font-weight:bolder;
-    padding-left: 10px;
-}
-.media-instagram{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align:center;
-    font-size: 70px;
-    font-weight:bolder;
-    padding-left: 10px;
-}
-#linkedin{
-    width: 120px;
-    height: 120px;
-    padding-left: 150px;
-}
-#facebooklogo{
-    width: 130px;
-    height: 130px;
-    padding-left: 65px;
-}
-#instagramicon{
-    width: 120px;
-    height: 120px;
-    padding-left: 60px;
-}
-.text-p{
-    font-size: large;
-    
-}
-#banner-id {
-    max-width: 100%;
-    height: auto;
-}
-.banner-div {
-    text-align: center;
-    margin-top: 30px;
+.texts-container {
+    background-color: #027dc5;
     padding: 20px;
-    background-color: #004F7C; /* Dark blue background */
-  }
-  
+}
+.texts-container h1 {
+    font-size: 60px;
+    text-align: center;
+}
+.iframe-container iframe {
+    width: 100%;
+    height: 800px;
+}
+.text-p {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.all-container {
+    background-color: #027dc5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.img-link {
+    width: 50%;
+}
+.link-container {
+    font-size: 40px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+.link-part {
+    background-color: #027dc5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 33.3%;
+}
+.iframe-container h1 {
+    text-align: center;
+}
+
+@media (max-width: 1500px) {
+    .all-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    .text-p {
+        font-size: 18px;
+    }
+    .link-container {
+        font-size: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .texts-container h1 {
+        font-size: 40px;
+    }
+    .text-p {
+        font-size: 16px;
+    }
+    .link-container {
+        font-size: 25px;
+    }
+    .iframe-container iframe {
+        height: 400px;
+    }
+}

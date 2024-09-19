@@ -3,31 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Yönetim paneli için admin kontrolü, yönetici arayüzü">
+    <meta name="keywords" content="admin paneli, yönetici arayüzü, kullanıcı yönetimi, admin kontrolü">
+    <title>Yönetim Paneli - Beksan Civata</title>
+    <link rel="stylesheet" href="/stylesheets/Adminpanel.css">
+    <link rel="stylesheet" href="/stylesheets/Genelayar.css">   
 </head>
 <body>
-    <h1>ADMİN PANELİ GELDİ</h1>
 
-    <form action="/productadd" method="post" enctype="multipart/form-data">
-        <label for="urunadi">Ürün adını giriniz: </label>
-        <input type="text" id="urunadi" name="urunadi">
-        <label for="urunresmi">Ürün resmini giriniz</label>
-        <input type="file" id="urunresmi" name="urunresmi">
-        <label for="urunaciklama">Ürün açıklamasını girin</label>
-        <input type="text" id="urunaciklama" name="urunaciklama">
-        <label for="urunsinif">Ürün sınıfını girin</label>
-        <input type="text" id="urunsinif" name="urunsinif">
-        <input type="submit">
-    </form>
+    <nav>
+        <div class="navbar-container">
+            <a href="/" class="link-h2"><h2 class="h2-nav">ANASAYFA</h2></a>
+            <a href="/kurumsal" class="link-h2"><h2 class="h2-nav">KURUMSAL</h2></a>
+            <a href="/urunler" class="link-h2"><h2 class="h2-nav">ÜRÜNLER</h2></a>
+            <a href="/iletisim" class="link-h2"><h2 class="h2-nav">İLETİŞİM</h2></a>
+        </div>
+    </nav>
 
-    <form action="/deletepost" method="post">
-        <label for="ID">Silmek istediğiniz ürünün id sini girin</label>
-        <input type="number" id="ID" name="ID">
-        <input type="submit">
-    </form>
-
-    
-
-
+    <div class="container-div">
+        <h1>BEKSAN CİVATA ADMİN PANELİ</h1>
+        <div class="pdrc-add-post">
+            <form action="/productadd" method="post" enctype="multipart/form-data">
+                <label for="urunadi">Ürün adını giriniz: </label>
+                <input type="text" id="urunadi" name="urunadi">
+                <label for="urunresmi">Ürün resmini giriniz</label>
+                <input type="file" id="urunresmi" name="urunresmi">
+                <label for="urunaciklama">Ürün açıklamasını girin</label>
+                <input type="text" id="urunaciklama" name="urunaciklama">
+                <label for="urunsinif">Ürün sınıfını girin</label>
+                <select name="urunsinif" id="urunsinif" style="margin-left: 42%; width: 200px; height: 50px;">
+                    <option value="Civata">Civata</option>
+                    <option value="Hırdavat">Hırdavat</option>
+                    <option value="El Aletleri ">El Aletleri </option>
+                    <option value="Elektrikli Aletler ">Elektrikli Aletler </option>
+                    <option value="İş Güvenliği">İş Güvenliği</option>
+                    <option value="Çelik Halat Ve Ekipmanları">Çelik Halat Ve Ekipmanları</option>
+                    <option value="Kaynak Makinası">Kaynak Makinası</option>
+                    <option value="Teker">Teker</option>
+                    <option value="Yapıştırıcı Ve Kimyasallar Boyalar">Yapıştırıcı Ve Kimyasallar Boyalar</option>
+                    <option value="Takım Çantası VE Avadanlık Grubu">Takım Çantası VE Avadanlık Grubu</option>
+                    <option value="Merdiven Ve İskele">Merdiven Ve İskele</option>
+                    <option value="Taş Ve Zımpara">Taş Ve Zımpara</option>
+                    <option value="Matkap Ucu Ve Bits Grubu">Matkap Ucu Ve Bits Grubu</option>
+                </select>
+                <input type="submit" value="Ürünü Ekle">
+            </form>
+        </div>
+        <div class="delete-post">
+            <form action="/deletepost" method="post">
+                <label for="ID">Silmek istediğiniz ürünün id'sini girin: </label>
+                <input type="number" id="ID" name="ID">
+                <input type="submit" value="Ürünü Sil">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -3,7 +3,6 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import dotenv from 'dotenv';
-import mysql from 'mysql';
 import path from 'path';
 
 //!routers import
@@ -14,14 +13,11 @@ import urunlerRouter from './routes/urunler.js';
 import loginRouter from './routes/login.js';
 import userAddRoutes from './routes/useradd.js';
 import productRoutes from './routes/admin.js';
-import connection from './config/db.js';
-
+import logMiddleware from './middlewares/logMiddleware.js';
 
 // Get current directory path
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-
 
 const app = express();
 
@@ -31,24 +27,24 @@ dotenv.config({ path: join(__dirname, '.env') });
 // Middleware'ler
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-// Statik dosyaları servis etmek için public klasörü kullan
 app.use(express.static(join(__dirname, 'public')));
-// Express settings
+app.use(logMiddleware); // Log middleware'ini burada kullanıyoruz
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-
-
 //!introduce routes
-
 app.use('/', indexRouter);
 app.use('/iletisim', iletisimRouter);
 app.use('/kurumsal', kurumsalRouter);
 app.use('/urunler', urunlerRouter);
-app.use('/login', loginRouter)
+app.use('/login', loginRouter);
 app.use('/users', userAddRoutes);
 app.use('/', productRoutes);
 
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.sendFile(path.join(__dirname, 'robots.txt'));
+});
 
 //!!portu almıyor sunucu
 const PORT = process.env.PORT;

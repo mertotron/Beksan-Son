@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheets/Genelayar.css">
+    <meta name="description" content="Giriş yap ve hesap yönetimi">
+    <meta name="keywords" content="giriş yap, kullanıcı oturumu, hesap yönetimi">
+    <title>Giriş Yap - Beksan Civata</title>
+    <link rel="stylesheet" href="/stylesheets/Genelayar.css">
+    <link rel="stylesheet" href="/stylesheets/Login.css">
 </head>
 <body>
     <nav id="nav-ticket-nav">
@@ -16,16 +19,16 @@
         </div>
     </nav>
     <div id="login-form">
-        <form action="/login/logincontrol" method="post">
-            <label for="uname">Username:</label>
-            <input type="text" id="uname" name="uname" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="GİRİŞ YAP">
+        <form action="/login/logincontrol" method="post" class="login-frm-in">
+            <label for="uname" class="margin-frm-item">Username:</label>
+            <input type="text" id="uname" name="uname" required class="margin-frm-item">
+            <label for="password" class="margin-frm-item">Password:</label>
+            <input type="password" id="password" name="password" required class="margin-frm-item">
+            <input type="submit" value="GİRİŞ YAP" class="margin-frm-item">
         </form>
     </div>
     <div class="banner-div">
-        <img src="logo/logo-nobgkırp.png" alt="BeksanCivataLogo" id="banner-id">
+        <a href="/login"><img src="logo/logo-nobgkırp.png" alt="BeksanCivataLogo" id="banner-id"></a>
     </div>
 </body>
 </html>

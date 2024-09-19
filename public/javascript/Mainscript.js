@@ -1,22 +1,29 @@
-let slideIndex = 0;
-showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+window.addEventListener('load', () => {
+
+  
+
+  if (window.innerWidth <= 800){
+    let mrt = document.getElementById('grid1');
+    mrt.classList.remove('grid-div'); 
+    mrt.classList.add('grid-div-row');
+    console.log('tamamlandı', mrt);
+    //----------------------------------------------//
+    let mrt1 = document.getElementById('dısdiv');
+    mrt1.classList.remove('grid-div'); 
+    mrt1.classList.add('grid-div-row');
+    console.log('tamamlandı', mrt1);
+    let mrt2 = document.getElementById('innerdiv');
+    mrt2.classList.add("ORDER")
+    //----------------------------------------------//
+    let mrt3 = document.getElementById('grid10');
+    mrt3.classList.remove('grid-div'); 
+    mrt3.classList.add('grid-div-row');
+    console.log('tamamlandı', mrt3);
+
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 8000); // Change image every 8 seconds
-}
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+  
+});
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+

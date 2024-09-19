@@ -2,20 +2,188 @@
     display: flex;
     flex-wrap: wrap; /* Flex öğelerin sarmalanmasını sağlar */
 }
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+} 
 
 .product-card {
     margin: 30px;
     border: 2px solid #000;
     flex: 1 0 calc(25% - 20px); /* Her bir öğe için genişlik hesaplanır ve kenar boşlukları çıkarılır */
     box-sizing: border-box; /* Kenarlık ve dolgu dahil olmak üzere genişlik hesaplanır */
-    height: 200px;
+    height: 700px;
+    text-align: center;
+    overflow: hidden; /* Kutunun taşmaması için eklenmiştir */
     border-radius: 20px;
-    background-color: #ced3d9;
+    position: relative;
+    margin: 5px;
+    padding: 0px;
+    margin-top: 30px;
+    background-color: #027dc5;
+    
+    text-align: center;
 }
 
+.img-prdc{
+
+    width: 70%;
+}
 .product-card:hover{
     background-color: white;
     transform: scale(1.1);
     background: linear-gradient(to top, #ced3d9, white); /* Kartın arka planına siyahtan beyaza doğru bir gradient uygulayın */
     
 }
+
+.product-description {
+    height: 32%; /* Belirli bir yükseklik belirler */
+    overflow-y: auto; /* Dikey kaydırma çubuğu ekler */
+    text-overflow: ellipsis; /* Metin taşmasını üç nokta ile gösterir */
+    white-space: normal; /* Metnin birden fazla satırda görünmesini sağlar */
+    place-items: center;
+    margin: 2px;
+    margin-top: px;
+}
+/* Scrollbar stili - Webkit tabanlı tarayıcılar (Chrome, Safari, Edge) için */
+.product-description::-webkit-scrollbar {
+    width: 10px; /* Scrollbar genişliği */
+}
+.product-description::-webkit-scrollbar-thumb {
+    background-color: black; /* Scrollbar'ın sürgü rengini ayarlayın */
+    border-radius: 10px; /* Scrollbar sürgü kenar yuvarlama */
+    border: 2px solid white; /* Scrollbar sürgü kenarlığı */
+    overflow-x: hidden; /* Yatay kaydırma çubuğunu gizler */
+}
+
+/* Nav bar altındaki ürün sınıflandırması */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Sayfanın sağa doğru genişlemesini engeller */
+}
+.product-classes {
+    background-color: #004F7C; /* İsteğe bağlı arka plan rengi */
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.product-classes .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: none;
+}
+
+.product-classes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-classes ul li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 16px;
+}
+
+.product-classes ul li a {
+    text-decoration: none;
+    color: white; /* İsteğe bağlı metin rengi */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-classes ul li a:hover {
+    background-color: #b30000; /* İsteğe bağlı hover rengi */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1000px) {
+    .product-classes .menu-toggle {
+        display: block;
+        width: 100%;
+        margin-left: 2%;
+    }
+
+    .product-classes ul {
+        display: none;
+        text-align: left;
+    }
+
+    .product-classes ul.open {
+        display: block;
+    }
+
+    .product-classes ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .product-classes ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+/* bitti */
+
+
+/* responsive grid */
+
+@media (width < 1000px) {
+    .card-container-products {
+        display: flex;
+        flex-wrap: wrap; /* Flex öğelerin sarmalanmasını sağlar */
+    }
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        width: 100%;
+    } 
+    
+    .product-card {
+        margin: 30px;
+        border: 2px solid #000;
+        flex: 1 0 calc(25% - 20px); /* Her bir öğe için genişlik hesaplanır ve kenar boşlukları çıkarılır */
+        box-sizing: border-box; /* Kenarlık ve dolgu dahil olmak üzere genişlik hesaplanır */
+        height: 200px;
+        text-align: center;
+        border-radius: 20px;
+        background-color: #005dce8e;
+        
+        text-align: center;
+        height: 95%;
+    }
+    .img-prdc{
+        width: 60%;
+    }
+    .product-card:hover{
+        background-color: white;
+        transform: scale(1.1);
+        background: linear-gradient(to top, #ced3d9, white); /* Kartın arka planına siyahtan beyaza doğru bir gradient uygulayın */
+        
+    }
+    .product-description {
+        height: 150px; /* Belirli bir yükseklik belirler */
+        overflow-y: auto; /* Dikey kaydırma çubuğu ekler */
+        text-overflow: ellipsis; /* Metin taşmasını üç nokta ile gösterir */
+        white-space: normal; /* Metnin birden fazla satırda görünmesini sağlar */
+        place-items: center;
+        margin: 2px;
+    }
+}
+

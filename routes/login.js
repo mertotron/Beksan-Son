@@ -16,7 +16,7 @@ router.post('/logincontrol', async (req, res) => {
         if (loggedIn) {
             res.render('adminpanel.ejs', { title: 'Admin Panel' });
         } else {
-            res.render('login', { title: 'Login', error: 'Kullanıcı adı veya şifre hatalı.' });
+            res.send('hatalı giriş');
         }
     } catch (error) {
         console.error('Login error:', error);
@@ -25,3 +25,5 @@ router.post('/logincontrol', async (req, res) => {
 });
 
 export default router;
+
+

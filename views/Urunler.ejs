@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beksan Civata Ürünler</title>
-    <link rel="stylesheet" href="stylesheets/Genelayar.css">
-    <link rel="stylesheet" href="stylesheets/Products.css">
+    <meta name="description" content="Ürünlerimiz, hırdavat ürünleri, civata çeşitleri, elektrikli el aletleri">
+    <meta name="keywords" content="ürünler, hırdavat ürünleri, civata çeşitleri, elektrikli el aletleri">
+    <title>Ürünler - Beksan Civata</title>
+    <link rel="stylesheet" href="/stylesheets/Genelayar.css">
+    <link rel="stylesheet" href="/stylesheets/Products.css">
 </head>
 <body>
     <nav>
@@ -17,25 +19,46 @@
         </div>
     </nav>
 
+    <div class="product-classes">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <ul id="product-classes-list">
+            <li><a href="/urunler">GENEL</a></li>
+            <li><a href="/urunler/Civata">CİVATA</a></li>
+            <li><a href="/urunler/Hirdavat">HIRDAVAT</a></li>
+            <li><a href="/urunler/ElAletleri">EL ALETLERİ</a></li>
+            <li><a href="/urunler/ElektrikliAletler">ELEKTRİKLİ ALETLER</a></li>
+            <li><a href="/urunler/IsGuvenligi">İŞ GÜVENLİĞİ</a></li>
+            <li><a href="/urunler/HalatVeEkipman">ÇELİK HALAT VE EKİPMANLARI</a></li>
+            <li><a href="/urunler/KaynakMakinesi">KAYNAK MAKİNASI</a></li>
+            <li><a href="/urunler/Teker">TEKER</a></li>
+            <li><a href="/urunler/YapistiriciVeKimyasallarBoyalar">YAPIŞTIRICI VE KİMYASALLAR BOYALAR</a></li>
+            <li><a href="/urunler/TakimCantasiVeAvadanlikGrubu">TAKIM ÇANTASI VE AVADANLIK GRUBU</a></li>
+            <li><a href="/urunler/MerdivenVeIskele">MERDİVEN VE İSKELE</a></li>
+            <li><a href="/urunler/TasVeZimpara">TAŞ VE ZIMPARA</a></li>
+            <li><a href="/urunler/MatkapUcuVeBitsGrubu">MATKAP UCU VE BİTS GRUBU</a></li>
+        </ul>
+    </div>
     <div class="card-container-products">
-        <% products.forEach(product => { %>
-            <div class="product-card">
-                <h4><%= product.urun_adi %></h4>
-                <h5>Ürün ID = <%= product.urun_id %></h5>
-                <% 
-                    // Dosya yolundan 'public' ifadesini çıkar ve ters eğik çizgileri düz eğik çizgilere dönüştür
-                    const imagePath = product.urun_resmi.replace(/\\/g, '/').replace('public', '');
-                %>
-                <img src="<%= imagePath %>" alt="<%= product.urun_adi %>">
-                <p><%= product.urun_aciklama %></p>
-            </div>
-        <% }) %>
+        <div class="product-container">
+            <% products.forEach(product => { %>
+                <div class="product-card">
+                    <h4><%= product.urun_adi %></h4>
+                    <h5>Ürün ID = <%= product.urun_id %></h5>
+                    <% 
+                        // Dosya yolundan 'public' ifadesini çıkar ve ters eğik çizgileri düz eğik çizgilere dönüştür
+                        const imagePath = product.urun_resmi.replace(/\\/g, '/').replace('public', '');
+                    %>
+                    <img src="<%= imagePath %>" class="img-prdc" alt="<%= product.urun_adi %>">
+                    <p class="product-description"><%= product.urun_aciklama %></p>
+                </div>
+            <% }) %>
+        </div>
     </div>
     
     
     <div class="banner-div">
-        <img src="logo/logo-nobgkırp.png" alt="BeksanCivataLogo" id="banner-id">
+        <a href="/login"><img src="/logo/logo-nobgkırp.png" alt="BeksanCivataLogo" id="banner-id"></a>
     </div>
-
+    <script src="/javascript/Products.js"></script>
 </body>
 </html>

@@ -3,13 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beksan Civata</title>
-    <link rel="stylesheet" href="stylesheets/Main.css">
-    <link rel="stylesheet" href="stylesheets/Slideshow.css">
+    <meta name="description" content="Ana sayfa için Beksan Civata, hırdavat, civata ve hırdavat, elektrikli el aletleri">
+    <meta name="keywords" content="Beksan Civata, hırdavat, civata ve hırdavat, elektrikli el aletleri">
+    <title>Ana Sayfa - Beksan Civata</title>
+    <link rel="stylesheet" href="/stylesheets/Main.css">
+    <link rel="stylesheet" href="/stylesheets/ParlakTxt.css">
+    <link rel="stylesheet" href="/stylesheets/Slidemain.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        /* Pop-up stili */
+        .modal {
+            display: none; /* Gizli başlangıç */
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <nav id="nav-ticket-nav">
-        <div class="navbar-container">
+    <nav id="nav-ticket-nav" style="position: sticky; top:0;z-index: 1;">
+        <div class="navbar-container FONT" style="height: 50px;">
             <a href="/" class="link-h2"><h2 class="h2-nav">ANASAYFA</h2></a>
             <a href="/kurumsal" class="link-h2"><h2 class="h2-nav">KURUMSAL</h2></a>
             <a href="/urunler" class="link-h2"><h2 class="h2-nav">ÜRÜNLER</h2></a>
@@ -17,49 +60,152 @@
         </div>
     </nav>
 
-    <div id="main-id1">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="images/Dış Cephe1.jpg" style="width:100%" class="slide-picture">
-                <div class="text"></div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="images/Dış Cephe2.jpg" style="width:100%" class="slide-picture">
-                <div class="text"></div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="images/İç Görünüm.jpg" style="width:100%" class="slide-picture">
-                <div class="text">Mağazamızın Dış Görünüşü</div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="dspl-sld1" id="main-id1">
+        <div class="section" style="margin-top: 10px;width: 100%;">
+            <img class="resm1" src="images/Dış Cephe2.jpg" alt="a">
+            <img class="resm1" src="images/İç Görünüm5.jpg" alt="a">
+            <img class="resm1" src="images/İç Görünüm6.jpg" alt="a">
+            <img class="resm1" src="images/İç Görünüm.jpg" alt="a">
         </div>
         <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+        <br>
+        
+        <!-- !dikkat -->
+        <div class="swiffy-slider">
+            <ul class="slider-container">
+                <li><img src="images/Dış Cephe2.jpg" style="max-width: 100%;height: auto;"></li>
+                <li><img src="images/İç Görünüm5.jpg" style="max-width: 100%;height: auto;"></li>
+                <li><img src="images/İç Görünüm6.jpg" style="max-width: 100%;height: auto;"></li>
+                <li><img src="images/İç Görünüm.jpg" style="max-width: 100%;height: auto;"></li>
+            </ul>
+        
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button>
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
-        <div id="aciklama-yazi">
-            <h2 class="aciklama-baslik">Neden Beksan Civata</h2>
-            <p class="aciklama"> Beksan Civata Tic. San. Ltd. Şti., kaliteli ve çeşitli civata ve hırdavat ürünleriyle sektörde öne çıkan bir şirkettir...</p>
+        <!-- !dikkat -->
+
+        <div class="shiny-text">
+            <div class="grid-div" id="grid1">
+                <div class="aciklama-resim-div">
+                    <img src="/images/yatay iç 6.jpg" class="aciklama-resim-div-a">
+                </div>
+                <div class="aciklama-yazı-div">
+                    <h2>Hakkımızda</h2>
+                    <p class="shine" style="width: 100%;height: 100%;float: right;">
+                        Beksan Civata Tic. San. Ltd. Şti., başta civata, hırdavat ve elektrikli el aletleri olmak üzere iç piyasaya tedarik sağlayan sektöründeki önemli firmalardan biridir. Sivas'ın dört bir yanına yayılmış amatör, yarı profesyonel ve profesyonel iş aletleri kullanıcılarına ve firmalara satış hizmeti sunmaktayız. Sizlere en uygun olan ürün ve markaları bütçenize göre farklı ve kaliteli seçeneklerle sunuyoruz. Sorunlarınıza acil çözümler üreten Beksan Civata, değer yaratmak isteyenlerin seçim önceliğinde yer alır.
+                    </p>
+                </div>
+            </div>
             <br>
-            <h2 class="aciklama-baslik">Neden Beksan Civata</h2>
-            <p class="aciklama">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
             <br>
-            <h2 class="aciklama-baslik">Neden Beksan Civata</h2>
-            <p class="aciklama">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+
+            <div class="grid-div" id="dısdiv">
+                <div class="aciklama-yazı-div">
+                    <h2>Neden Beksan Civata</h2>
+                    <ul>
+                        <li>Tecrübe: Yılların birikimi ve deneyimiyle hizmetinizdeyiz.</li>
+                        <li>Hızlı Sevkiyat: Ürünlerimizi en hızlı şekilde sizlere ulaştırıyoruz.</li>
+                        <li>Geniş Ürün Yelpazesi: İhtiyacınıza uygun geniş ürün yelpazemizle karşınızdayız.</li>
+                        <li>Zaman ve Tasarruf: Zamanınızı ve bütçenizi en iyi şekilde değerlendirmenize yardımcı oluyoruz.</li>
+                        <li>Teknik ve Uzman Kadro: Alanında uzman ekibimizle her zaman yanınızdayız.</li>
+                        <li>Dünya Standartlarında İş Kalitesi: Kaliteden ödün vermeden dünya standartlarında hizmet sunuyoruz.</li>
+                        <li>Güvenilir Marka: Sektörde güvenilir bir marka olarak tanınıyoruz.</li>
+                        <li>En Uygun Fiyat: En uygun fiyat garantisiyle bütçenizi düşünüyoruz.</li>
+                    </ul>
+                </div>
+                <div class="aciklama-resim-div" id="innerdiv">
+                    <img src="/images/yatay iç 2.jpg" class="aciklama-resim-div-a RESM">
+                </div>
+            </div>
+
             <br>
-            <h2 class="aciklama-baslik">Neden Beksan Civata</h2>
-            <p class="aciklama">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <br>
+
+            <div class="grid-div" id="grid10">
+                <div class="aciklama-resim-div">
+                    <img src="/images/yatay iç 9.jpg" class="aciklama-resim-div-a">
+                </div>
+                <div class="aciklama-yazı-div">
+                    <h2>Ürün Kategorilerimiz</h2>
+                    <p>Beksan Civata olarak sizlere sunduğumuz geniş ürün yelpazesi:</p>
+                    <ul>
+                        <li>Civata</li>
+                        <li>Hırdavat</li>
+                        <li>El Aletleri</li>
+                        <li>Elektrikli Aletler</li>
+                        <li>İş Güvenliği</li>
+                        <li>Çelik Halat ve Ekipmanları</li>
+                        <li>Kaynak Makinası</li>
+                        <li>Kaynak Malzemesi</li>
+                        <li>Teker</li>
+                        <li>Yapıştırıcı ve Kimyasallar Boyalar</li>
+                        <li>Takım Çantası ve Avadanlık Grubu</li>
+                        <li>Merdiven ve İskele</li>
+                        <li>Taş ve Zımpara</li>
+                        <li>Matkap Ucu ve Bits Grubu</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="banner-div">
+            <a href="/login"><img src="logo/logo-nobgkırp.png" alt="BeksanCivataLogo" id="banner-id"></a>
         </div>
     </div>
-    <div class="banner-div">
-        <img src="logo/logo-nobgkırp.png" alt="BeksanCivataLogo" id="banner-id">
+    
+    <!-- KVKK Pop-up -->
+    <div id="kvkkModal" class="modal">
+        <div class="modal-content">
+            <h2>KVKK Onayı</h2>
+            <p>Beksan Civata olarak, web sitemizi ziyaret ettiğinizde kişisel verilerinizi korumaya özen gösteriyoruz. Sitemizin güvenliği için ip adreslerinizin ve yaptığınız işlemlerin kaydedildiğini bilmenizi isteriz. Bilgileriniz güvenlik önlemleri dışında hiçbir yerde kullanılmayacaktır</p>
+            <button id="kvkkAccept">Kabul Ediyorum</button>
+        </div>
     </div>
-    <script src="Javascript/Mainscript.js"></script>
+
+    <script src="javascript/Mainscript.js"></script>
+    <script src="javascript/slidemain.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <script>
+        window.onload = function() {
+        var modal = document.getElementById("kvkkModal");
+        var btnAccept = document.getElementById("kvkkAccept");
+        var spanClose = document.getElementById("kvkkClose");
+
+        // Pop-up'ı göster
+        modal.style.display = "block";
+
+        // Kabul butonuna tıklanınca pop-up'ı kapat ve kabul isteği gönder
+        btnAccept.onclick = function() {
+            modal.style.display = "none";
+            
+            // AJAX isteği gönder
+            fetch('/accept-kvkk', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ accepted: true })
+            }).then(response => {
+                if (response.ok) {
+                    console.log('KVKK kabul edildi ve loglandı.');
+                } else {
+                    console.error('KVKK kabul edilirken bir hata oluştu.');
+                }
+            }).catch(error => {
+                console.error('KVKK kabul edilirken bir hata oluştu:', error);
+            });
+        }
+
+    }
+    </script>
 </body>
 </html>

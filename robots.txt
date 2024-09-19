@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /controllers/
+Disallow: /middlewares/
+Disallow: /nodemodules/
+Disallow: /routes/
+Disallow: /tests/
+Disallow: /.env
+Disallow: /app.mjs
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.gitignore
+Disallow: /config/

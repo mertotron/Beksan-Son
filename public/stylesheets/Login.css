@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #027dc5;
+    padding: 10px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.link-h2 {
+    color: white;
+    text-decoration: none;
+}
+
+.h2-nav {
+    margin: 0;
+}
+
+#login-form {
+    display: grid;
+    flex-direction: column;
+    background-color: #027dc5;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-frm-in {
+    display: grid;
+    flex-direction: column;
+    background-color: #027dc5;
+}
+
+.margin-frm-item {
+    margin-top: 10%;
+    height: 30px;
+    margin: 10px 0;
+    font-size: large;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.margin-frm-item[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+}
+
+.margin-frm-item[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Banner div at the bottom */
+.banner-div {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+.banner-div img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 800px) {
+    #login-form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    #login-form {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
