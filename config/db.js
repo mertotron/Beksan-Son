@@ -12,13 +12,12 @@ const connection = mysql.createConnection({
     database: process.env.DB_NAME
 });
 
-console.log('bağlantı hatası');
-
-
-
 // MySQL bağlantısını başlatma
 connection.connect(error => {
-    if (error) throw error;
+    if (error) {
+        console.error('Bağlantı hatası:', error.message);
+        return;
+    }
     console.log('MySQL bağlantısı başarılı');
 });
 
