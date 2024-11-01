@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 // .env dosyasından çevre değişkenlerini yükleme
 dotenv.config({ path: './.env' });
-try{
+
 // MySQL bağlantısı oluşturma
 const connection = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -11,9 +11,9 @@ const connection = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
-}catch{
+
 console.log('bağlantı hatası');
-}
+
 
 
 // MySQL bağlantısını başlatma
