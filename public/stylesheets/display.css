@@ -1,0 +1,17 @@
+.display1
+{
+    display: block;
+}
+.display2
+{
+    display: none;
+}
+
+@media (max-width:800px) {
+   .display1{
+    display: none;
+   }
+   .display2{
+    display: block;
+   }
+}
